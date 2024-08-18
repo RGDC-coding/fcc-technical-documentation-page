@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Properties Guide</title>
     <link rel="stylesheet" href="styles.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
   </head>
   <body>
     <nav id="navbar">
@@ -67,10 +73,21 @@
           Introduction
         </header>
         <div class="divider"></div>
+        <h1>
+          Welcome to the Flexbox Properties Guide
+        </h1>
         <div>
-          <p>"Small intro goes here"</p>
+          <p> This website is a simple, straightforward guide dedicated to helping you understand the essential properties of Flexbox in CSS. Flexbox, or the "Flexible Box Layout," is a powerful layout tool that allows you to create dynamic and responsive designs with ease. Whether you're new to Flexbox or need a quick reference, this guide covers all the key properties you'll need to master.</p>
         </div>
-
+        <h1>
+          What You'll Learn
+        </h1>
+        <div>
+          <p> In this guide, you'll explore the core Flexbox properties that control the behavior and alignment of elements within a flex container. From setting up a flex container to managing how items align, wrap, and distribute space, this resource is designed to provide clear, practical examples to help you implement Flexbox in your projects with confidence.</p>
+          </br>
+          <p> Dive into the sections below to start learning how to make your layouts more flexible and efficient using Flexbox!</p>
+        </div>
+<div class="small-divider"></div>
       <div id="Properties-for-the-Parent">Properties for the Parent
 (flex container)</div>
 <div class="divider"></div>
@@ -81,66 +98,209 @@
           display
         </header>
         <div>
-          <p>"Section2 text goes here"</p>
+          <p>The display property in Flexbox is used to designate an element as a flex container, which then enables the flexbox layout model for its direct children.</p></br>
+          <p>Once an element is set to display: flex; or display: inline-flex;, all of its direct children become flex items, which can then be arranged and aligned using other Flexbox properties.
+          </p>
+          <pre>
+          <code>
+            .container {
+  display: flex; /* or inline-flex */
+}
+          </code>
+          </pre>
+          <p class="bold">Note:</p>
+          <p>CSS columns have no effect on a flex container.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex-direction">
         <header>
           flex-direction
         </header>
+        <img src="" alt="flex-direction" class="img" id="flex-direction-img">
+        <p>The flex-direction property in Flexbox determines the direction in which flex items are placed inside a flex container. It establishes the main axis along which the flex items will be laid out and controls whether they are arranged in rows or columns, as well as the order in which they appear.</p>
+        <pre><code>.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}</code></pre>       
         <div>
-          <p>"Section3 text goes here"</p>
+          <p><span class="bold">row:</span> The default value. Flex items are laid out horizontally from left to right (in a left-to-right writing mode).</p></br>
+          <p><span class="bold">row-reverse:</span> Flex items are laid out horizontally from right to left, reversing the normal order.</p></br>
+          <p><span class="bold">column:</span> Flex items are laid out vertically from top to bottom.</p></br>
+          <p><span class="bold">column-reverse:</span> Flex items are laid out vertically from bottom to top, reversing the normal order.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex-wrap">
         <header>
           flex-wrap
         </header>
+         <img src="" alt="flex-wrap" class="img" id="flex-wrap-img">
         <div>
-          <p>"Section4 text goes here"</p>
+          <p>The flex-wrap property in Flexbox specifies whether flex items should wrap onto multiple lines when they exceed the size of their flex container. By default, flex items will try to fit onto a single line, but you can use flex-wrap to allow them to wrap if necessary.</p>
+          <pre><code>.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}</code></pre>
+          <p><span class="bold">nowrap:</span> This is the default value. Flex items are laid out in a single line, and they will overflow the container if they don't fit.</p></br>
+          <p><span class="bold">wrap:</span> flex items will wrap onto multiple lines, from top to bottom.</p></br>
+          <p><span class="bold">wrap-reverse:</span> flex items will wrap onto multiple lines from bottom to top.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex-flow">
         <header>
           flex-flow
         </header>
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>The flex-flow property in Flexbox is a shorthand that combines the flex-direction and flex-wrap properties into a single declaration. This allows you to set both the main axis direction and the wrapping behavior of flex items in one line of code.</p>
+          <pre><code>.container {
+  flex-flow: column wrap;
+}</code></pre>
         </div>
       </section>
-      <section class="main-section" id="justify-content>
+      <div class="small-divider"></div>
+      <section class="main-section" id="justify-content">
         <header>
           justify-content
         </header>
-        <div>
-          <p>"Section5 text goes here"</p>
+        <h3>flex-start</h3>
+        <img src="" alt="justify-content-flex-start" class="img" id="justify-content-img-1">
+        <h3>flex-end</h3>
+         <img src="" alt="justify-content-flex-end" class="img" id="justify-content-img-2">
+         <h3>center</h3>
+         <img src="" alt="justify-content-center" class="img" id="justify-content-img-3">
+         <h3>space-between</h3>
+         <img src="" alt="justify-content-space-between" class="img" id="justify-content-img-4">
+         <h3>space-around</h3>
+         <img src="" alt="justify-content-space-around" class="img" id="justify-content-img-5">
+         <h3>space-evenly</h3>
+         <img src="" alt="justify-content-space-evenly" class="img" id="justify-content-img-6">
+         
+        <div>        
+          <p>The justify-content property in Flexbox is used to align and distribute flex items along the main axis of the flex container. This property is particularly useful for controlling the spacing and positioning of items when there is extra space within the container.</p>
+          <pre><code>.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+} </code></pre>
+          <p><span class="bold">flex-start:</span> Aligns flex items to the start of the main axis. This is the default value.</p></br>
+          <p><span class="bold">flex-end:</span> Aligns flex items to the end of the main axis.</p></br>
+          <p><span class="bold">center:</span> Centers flex items along the main axis.</p></br>
+          <p><span class="bold">space-between:</span> Distributes flex items so that there is equal space between them. The first item is aligned to the start of the container, and the last item is aligned to the end.</p></br>
+          <p><span class="bold">space-around:</span> Distributes flex items with equal space around them. This means that the space between items is the same, and there is also space between the items and the container edges. Note that the space at the edges of the container will be half the size of the space between items.</p></br>
+          <p><span class="bold">space-evenly:</span> Distributes flex items with equal space between them, including at the edges of the container. All gaps between items, as well as the gaps between items and the container edges, are equal.</p></br>
+          <p><span class="bold">start:</span> Aligns flex items to the start of the writing mode direction (replaces flex-start in certain contexts).</p></br>
+          <p><span class="bold">end:</span> Aligns flex items to the end of the writing mode direction (replaces flex-end in certain contexts).</p></br>
+          <p><span class="bold">left:</span> Aligns flex items to the left edge of the container, unless this alignment does not fit with the flex-direction.</p></br>
+          <p><span class="bold">right:</span> Aligns flex items to the right edge of the container, unless this alignment does not fit with the flex-direction.</p></br>
+          <p class="bold">Note:</p>
+          <p>Keep in mind that browser support for some justify-content values can be inconsistent. For instance, older versions of Edge do not support space-between, and some values like start, end, left, and right are not yet supported in Chrome. For the most reliable results, use flex-start, flex-end, or center.</p></br>
+          <p>Additionally, you can use the safe and unsafe keywords with these values. The safe keyword ensures that elements won't be pushed off-screen in a way that prevents content from being scrolled into view, avoiding "data loss."</p>
+
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="align-items">
         <header>
           align-items
         </header>
+      
+        <div id="align-items-imgs">
+          <h3>flex-start</h3>
+        <img src="" alt="align-items-flex-start" class="img" id="align-items-img-1">
+        <h3>flex-end</h3>
+        <img src="" alt="align-items-flex-end" class="img" id="align-items-img-2">
+        <h3>center</h3>
+        <img src="" alt="align-items-center" class="img" id="align-items-img-3">
+        <h3>stretch</h3>
+        <img src="" alt="align-items-stretch" class="img" id="align-items-img-4">
+        
+        </div>
+        <h3>baseline</h3>
+        <img src="" alt="align-items-baseline" class="img" id="align-items-img-5">
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>The align-items property in Flexbox aligns flex items within a flex container along the cross axis (perpendicular to the main axis). This property affects how individual flex items are positioned relative to each other and the container's cross axis</p>
+          <pre><code>.container {
+  align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+}</code></pre>
+          <p><span class="bold">flex-start:</span> Aligns flex items to the start of the cross axis (top of the container in a horizontal flex container).</p></br>
+
+          <p><span class="bold">flex-end:</span> Aligns flex items to the end of the cross axis (bottom of the container in a horizontal flex container).</p></br>
+
+          <p><span class="bold">center:</span> Centers flex items along the cross axis.</p></br>
+
+          <p><span class="bold">baseline:</span> Aligns flex items along their baseline, which is the line on which text sits.</p></br>
+
+          <p><span class="bold">stretch:</span> Stretches flex items to fill the container along the cross axis. This is the default value, making items expand to match the height of the flex container.</p></br>
+          <p class="bold">Note:</p>
+          <p>The `safe` and `unsafe` modifier keywords can be used with all the values for `align-items` to help ensure that content remains accessible and does not get pushed out of view. For details on browser support, visit <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">MDN Web Docs</a>.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="align-content">
         <header>
           align-content
         </header>
+       
+          <h3>flex-start</h3>
+        <img src="" alt="align-content-flex-start" class="img" id="align-content-img-1">
+        <h3>flex-end</h3>
+        <img src="" alt="align-content-flex-end" class="img" id="align-content-img-2">
+        <h3>center</h3>
+        <img src="" alt="align-content-center" class="img" id="align-content-img-3">
+        <h3>stretch</h3>
+        <img src="" alt="align-content-stretch" class="img" id="align-content-img-4">
+        <h3>space-between</h3>
+        <img src="" alt="align-content-space-between" class="img" id="align-content-img-5">
+        <h3>space-around</h3>
+        <img src="" alt="align-content-space-around" class="img" id="align-content-img-6">
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>The align-content property in Flexbox aligns flex lines within a flex container along the cross axis (perpendicular to the main axis). It is used when the flex container has multiple lines of flex items, which occurs when flex-wrap is set to wrap or wrap-reverse.</p>
+          <pre><code>.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+}</code></pre>
+          <p><span class="bold">flex-start:</span> Aligns the flex lines to the start of the cross axis (top of the container in a horizontal flex container).</p></br>
+
+          <p><span class="bold">flex-end:</span> Aligns the flex lines to the end of the cross axis (bottom of the container in a horizontal flex container).</p></br>
+
+          <p><span class="bold">center:</span> Centers the flex lines along the cross axis.</p></br>
+
+          <p><span class="bold">space-between:</span> Distributes the flex lines evenly along the cross axis, with equal space between them and none at the start or end.</p></br>
+
+          <p><span class="bold">space-around:</span> Distributes the flex lines with equal space around them. This means the space on the edges will be half the size of the space between lines.</p></br>
+
+          <p><span class="bold">space-evenly:</span> Distributes the flex lines with equal space between them, including the space at the edges of the container.</p></br>
+
+          <p><span class="bold">stretch:</span> Stretches the flex lines to fill the available space along the cross axis. This is the default value.</p></br>
+
+          <p class="bold">Notes:</p>
+          <p>Support for align-content values can vary across browsers. It’s generally well-supported in modern browsers, but always check compatibility charts if you need to ensure consistent behavior.</p></br>
+          <p>The align-content property is useful for controlling the distribution and alignment of flex lines in a container, enhancing layout flexibility especially in responsive designs.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="gap, row-gap, column-gap">
         <header>
           gap, row-gap, column-gap
         </header>
+        <h3>gap: 50px</h3>
+        <img src="" alt="gap-50px" class="img" id="gap-img-1">
+        <h3>gap: 100px</h3>
+        <img src="" alt="gap-100px" class="img" id="gap-img-2">
+        <h3>gap: 50px 100px</h3>
+        <img src="" alt="gap-50px-100px" class="img" id="gap-img-3">
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>The gap property specifically adjusts the spacing between flex items. It affects only the space between items, not the spacing at the outer edges of the container.</p>
+          <pre><code>.container {
+  display: flex;
+  ...
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+}</pre></code>
+          <p>You can think of the gap property as setting a minimum space between items. If there is extra space due to properties like justify-content: space-between;, the gap will only apply if the available space becomes smaller than the specified gap.</p></br>
+          <p>Additionally, gap is not limited to Flexbox; it also works with CSS Grid and multi-column layouts.</p>
         </div>
       </section>
-
+<div class="small-divider"></div>
       <div id="Properties-for-the-Children">Properties for the Children (flex items)</div>
 <div class="divider"></div>
       <section class="main-section" id="order">
@@ -148,49 +308,90 @@
           order
         </header>
         <div>
-          <p>"Section5 text goes here"</p>
+        <img src="" alt="order-img-1" class="img" id="order-img-1">
+        <img src="" alt="order-img-2" class="img" id="order-img-2">
+        <img src="" alt="order-img-3" class="img" id="order-img-3">
+          <p>The order property in Flexbox is used to control the sequence in which flex items appear within a flex container. By default, flex items are displayed in the order they appear in the HTML source code. However, the order property allows you to change this order without altering the HTML structure.</p>
+          <pre><code>.item {
+  order: 5; /* default is 0 */
+}</code></pre>
+          <p>Items with the same order revert to source order.
+
+</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex-grow">
         <header>
           flex-grow
         </header>
+        <img src="" alt="flex-grow-img-1" class="img" id="flex-grow-img-1">
+        <img src="" alt="flex-grow-img-2" class="img" id="flex-grow-img-2">
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>The flex-grow property in Flexbox is used to define how flex items should grow relative to each other when there is extra space available in the flex container. It controls the ability of flex items to expand to fill the available space within their flex container.</p></br>
+          <p>If all items have a flex-grow value of 1, any extra space in the container will be shared equally among them. However, if one item has a flex-grow value of 2, that item will try to take up twice as much of the available space compared to the others</p>
+          <pre><code>.item {
+  flex-grow: 4; /* default 0 */
+}</code></pre>
+          <p class="bold">Note:</p>
+          <p>Negative numbers are invalid.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex-shrink">
         <header>
           flex-shrink
         </header>
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>The flex-shrink property in Flexbox determines how flex items should shrink relative to each other when the flex container is too small to fit all items at their initial sizes. It controls the ability of flex items to reduce their size to prevent overflow.</p>
+          <pre><code>.item {
+  flex-shrink: 3; /* default 1 */
+}</code></pre>
+          <p class="bold">Note:</p>
+          <p>Negative numbers are invalid.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex-basis">
         <header>
           flex-basis
         </header>
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>This property sets the initial size of an element before any extra space is allocated. It can be specified as a fixed length (e.g., 20%, 5rem) or using keywords. The auto keyword tells the browser to use the element’s width or height properties for sizing, a behavior that was previously managed by the deprecated main-size keyword.</p></br>
+          <p>The content keyword would size the element based on its content, but support for this keyword is limited, making it difficult to test and understand how related values like max-content, min-content, and fit-content behave.</p>
+          <pre><code>.item {
+  flex-basis:  | auto; /* default auto */
+}</code></pre>
+          <p>If flex-basis is set to 0, the extra space around content isn’t factored in. If set to auto, the extra space is distributed based on its flex-grow value. See this <a href="https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg" target="_blank">graphic</a>.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="flex">
         <header>
           flex
         </header>
         <div>
-          <p>"Section5 text goes here"</p>
+          <p>This property is a shorthand for setting flex-grow, flex-shrink, and flex-basis all at once. The second and third values (flex-shrink and flex-basis) are optional. The default setting is 0 1 auto. If you use a single value, such as flex: 5;, it automatically sets flex-basis to 0%, which is equivalent to setting flex-grow: 5;, flex-shrink: 1;, and flex-basis: 0%;.</p>
+          <pre><code>.item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}</pre></code>
+          <p><strong class="bold">It is advisable to use this shorthand property</strong> instead of setting the individual values separately. The shorthand automatically handles the other settings in a smart way.</p>
         </div>
       </section>
+      <div class="small-divider"></div>
       <section class="main-section" id="align-self">
         <header>
           align-self
         </header>
+        <img src="" alt="align-self" class="img" id="align-self-img">
         <div>
-          <p>"Section5 text goes here"</p>
+        <div>
+          <p>The align-self property in Flexbox allows you to override the alignment of a specific flex item along the cross axis, independently of the other flex items in the container. This property is used to control how an individual flex item is aligned within its flex container, providing greater flexibility in layout design.</p></br>
+          <p class="bold">Note:</p>
+          <p>Float, clear and vertical-align have no effect on a flex item.</p>
         </div>
       </section>
+      
     </main>
   </body>
   <footer>

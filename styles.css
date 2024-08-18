@@ -8,6 +8,10 @@ body{
   min-width: 320px;
 }
 
+main a{
+  color: #FC4100;
+}
+
 /*Nav*/
 
 nav{  
@@ -231,6 +235,10 @@ main{
       color: transparent;
       width: 100%;      
     }
+    
+  footer{
+    margin-top: 1em;
+  }
 }
 
 /*Nav min-width 769px*/
@@ -269,12 +277,12 @@ main{
   }
 
 
-
   main {
     flex-grow: 2;
     height: 90vh;
     overflow: scroll;
     margin: 0;
+    width: calc(100% - 250px)
   }
 
   .nav-links {
@@ -291,16 +299,41 @@ main{
 
   .indent2{
     padding-left: 30px;
-  }
+  }  
 
 }
 
 /*Body*/
 
+.small-divider {
+  width: 75%;
+  margin: auto;
+  margin-top: 2em;
+  border: 1px #F3A953 solid;
+  box-shadow:  0px 0px 15px 1px rgba(0,0,0,0.3);
+}
+
+pre {
+  margin-bottom: 25px;
+  height: 135px;
+}
+
+code {
+  width: 400px;
+  height: 100px;
+  max-width: 75%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 8px;
+  border: 4px solid #f3a953;
+  box-shadow:  0px 0px 15px 1px rgba(0,0,0,0.75);
+}
+
 .divider {
   height: 0;
   width: 75%;
   margin: auto;
+  box-shadow:  0px 0px 15px 1px rgba(0,0,0,0.3);
   background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 3px, transparent 3px) 0% 0%/8px 8px no-repeat,
             radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 3px, transparent 3px) 100% 0%/8px 8px no-repeat,
             radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 3px, transparent 3px) 0% 100%/8px 8px no-repeat,
@@ -313,12 +346,25 @@ padding: 2px;
 box-sizing: border-box;
 }
 
-.main-section header {
+.main-section header , #Introduction h1 {
   color: #FC4100;
   font-size: large;
-  padding: 0.5em 1em 0em 1em;
+  font-weight: normal;
+  padding: 2em 1em 1em 1em;
         text-shadow: 0px 0px 8px rgba(0,0,0,6);
 }
+
+p {
+  padding: 0em;
+  max-width: 50%;
+  margin: auto;
+}
+
+h1 {
+  max-width: 70%;
+  margin: auto;
+}
+
 
 #Properties-for-the-Parent , #Properties-for-the-Children , #Introduction header{
   color: #00215E;
@@ -328,6 +374,116 @@ box-sizing: border-box;
   text-shadow: 0px 0px 8px rgba(0,0,0,6);
 }
 
+.bold {
+  font-weight: 800;
+  color: #00215E;
+}
+
+h3 {
+  color: #00215E;
+  font-weight: normal;
+  text-shadow: 0px 0px 8px rgba(0,0,0,1); 
+  margin-bottom: 0.1em ;
+  height: 25px;
+  width: 250px;
+  margin: auto;
+
+
+
+}
+
+/* Body - Imgs*/
+
+.img {
+  max-width: 75%;
+  margin: 1em auto;
+  background-color: #366ed8;
+  border: 4px solid #f3a953;
+  border-radius: 8px;
+  box-shadow:  0px 0px 15px 1px rgba(0,0,0,0.75);
+}
+
+#flex-direction-img {
+  width: 500px;
+  height: 200px;
+}
+
+#flex-wrap-img {
+  width: 500px;
+  height: 200px; 
+}
+
+#justify-content-img-1 , #justify-content-img-2 , #justify-content-img-3 , #justify-content-img-4 , #justify-content-img-5 , #justify-content-img-6 {
+  width: 500px;
+  height: 100px;
+  margin-top: 0;
+}
+
+#align-items-imgs{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 550px;
+  max-height: 500px;
+  margin: auto;
+}
+
+#align-items-img-1 , #align-items-img-2 , #align-items-img-3 , #align-items-img-4 , #align-items-img-5 {
+  width: 250px;
+  height: 200px;
+  margin-top: 0;
+}
+
+
+#align-content-img-1 , #align-content-img-2 , #align-content-img-3 , #align-content-img-4 , #align-content-img-5 , #align-content-img-6 {
+  width: 500px;
+  height: 200px;
+  margin-top: 0;
+}
+
+#gap-img-1 {
+   width: 500px;
+  height: 52px;
+  margin-top: 0;
+} 
+
+#gap-img-2 {
+   width: 500px;
+  height: 191px;
+  margin-top: 0;
+
+} 
+
+#gap-img-3 {
+  width: 500px;
+  height: 140px;
+  margin-top: 0;
+}
+
+#order-img-1 , #order-img-2 {
+  width: 500px;
+  height: 100px;
+  margin-top: 0;
+}
+
+#order-img-3 {
+  width: 500px;
+  height: 300px;
+  margin-top: 0;
+}
+
+#flex-grow-img-1 , #flex-grow-img-2 {
+  width: 500px;
+  height: 100px;
+  margin-top: 0;
+}
+
+#align-self-img {
+  width: 500px;
+  height: 200px;
+  margin-top: 0;
+}
+
 /* Footer */
 
 footer {
@@ -335,6 +491,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   background-color: #366ED8;
+  border-top: 2px solid #f3a953;
   box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.75) inset;
   color: #F3A953;
   text-shadow: 0px 0px 8px rgba(0,0,0,6);
